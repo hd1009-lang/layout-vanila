@@ -1,0 +1,184 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+*{
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
+}
+html{
+  color: #fff;
+}
+.flex-center{
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+}
+
+.container{
+  width : 100%;
+  height: fit-content;
+
+  background-color: #000;
+
+  padding: 40.91px 0 26.96px 0;
+}
+.container .header{
+  width: 100%;
+}
+.container .header .header-top{
+  justify-content: space-between;
+
+  padding: 0 35.59px 0 44.65px;
+
+  margin-bottom: 59.15px;
+}
+.container .header .header-top .menu{
+  position: fixed;
+  top     : 97px;
+  left    : 0;
+
+  width           : 100%;
+  height          : 100vh;
+  background-color: #000;
+
+  border-top    : 1px solid #fff;
+
+  display: none;
+}
+.container .header .header-top .menu.active{
+  display: initial;
+}
+.container .header .header-top .menu a{
+  padding-right: 38px;
+  height: 66px;
+
+  color          : #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight    : 400;
+  font-size      : 20px;
+  line-height    : 24px;
+  width: 100%;
+
+  justify-content: right;
+
+}
+
+.container .header .header-top .logo{
+  font-weight: 600;
+  font-size  : 13.2495px;
+  line-height: 16px;
+
+  text-transform: uppercase;
+}
+
+.container .header  .header-main{
+  width     : 100%;
+  text-align: center;
+
+  margin-bottom: 149.06px;
+  
+}
+.container .header .header-main h1{
+  width : 322.94px;
+  height: 184px;
+
+  font-weight: 600;
+  font-size  : 50px;
+  line-height: 46px;
+  text-align : center;
+
+  margin: 0px auto 33.44px;
+}
+.container .header .header-main span{
+  display: inline-block;
+
+  width : 293.58px;
+  height: 108px;
+
+  font-weight: 400;
+  font-size  : 15px;
+  line-height: 18px;
+  text-align : center;
+
+  margin: 0 40.71px;
+
+  color: #BABABA;
+}
+
+.work-container .work-container-title,
+.services-container .services-container-title{
+  width: 100%;
+  margin-bottom: 55.83px;
+}
+.work-container .work-container-title h4,
+.services-container .services-container-title h4{
+  font-weight: 600;
+  font-size  : 34.5808px;
+  line-height: 42px;
+
+  text-align: center;
+}
+
+@media(min-width:1440px){
+  .work-container .work-container-title h4,
+  .services-container .services-container-title  h4{
+    font-size  : 80.9309px;
+    line-height: 98px;
+
+    margin-bottom: 96.62px;
+  }
+  .container .header .header-top{
+    padding: 0 91px  0 96px ;
+    margin-bottom: 229.44px;
+  }
+  .container .header .header-top .logo{
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .container .header .header-top .icon-menu{
+    display: none;
+  }
+  .container .header .header-top .menu{
+    display: initial;
+    position: initial;
+
+    width: 427px;
+    height: fit-content;
+
+    border: none;
+
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .container .header .header-top .menu a{
+    display: inline-flex;
+    width: fit-content;
+    height: fit-content;
+
+    justify-content: center;
+
+    padding-right: initial;
+  }
+  .container .header  .header-main{
+    margin-bottom: 240.69px;
+  }
+  .container .header .header-main h1{
+    width: 1190px;
+    height: 402px;
+    font-size  : 162.959px;
+    line-height: 134px;
+    margin: 0px auto 56.28px ;
+  }
+  .container .header .header-main span{
+    padding: 0 20px;
+    width : 1099.76px;
+    height: 156px;
+    font-size  : 32px;
+    line-height: 39px;
+    margin: 0px 168px 0px 204.24px;
+  }
+
+}
