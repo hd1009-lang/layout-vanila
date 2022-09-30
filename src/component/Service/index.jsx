@@ -2,9 +2,9 @@ import React from 'react';
 import Item from './item';
 import { ListService } from './mockup';
 
-const Services = () => {
+const Services = ({ scrollRef }) => {
   return (
-    <section className='services-container'>
+    <section ref={scrollRef} className='services-container'>
       <div className='services-container-title'>
         <h4>Services</h4>
       </div>

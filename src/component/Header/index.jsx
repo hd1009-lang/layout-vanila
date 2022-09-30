@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import BarIcon from '../../assets/bar.svg';
 import TimesIcon from '../../assets/mask.png';
-const Header = () => {
+const Header = ({ scrollInWork, scrollInServices, scrollInContact }) => {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const toggleMenu = () => {
     setIsShowMenu((isShowMenu) => !isShowMenu);
@@ -16,13 +16,34 @@ const Header = () => {
           <img onClick={() => toggleMenu()} src={isShowMenu ? TimesIcon : BarIcon} alt='bar-icon' />
         </div>
         <div className={`${isShowMenu ? 'active' : ''} menu`}>
-          <a className='flex-center' href=''>
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              scrollInWork();
+            }}
+            className='flex-center'
+            href='work'
+          >
             work
           </a>
-          <a className='flex-center' href=''>
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              scrollInServices();
+            }}
+            className='flex-center'
+            href='services'
+          >
             services
           </a>
-          <a className='flex-center' href=''>
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              scrollInContact();
+            }}
+            className='flex-center'
+            href='contact'
+          >
             contact
           </a>
         </div>

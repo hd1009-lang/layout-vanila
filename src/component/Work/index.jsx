@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Item from './item';
 import { ListWork } from './mockup';
-const Works = () => {
+const Works = ({ scrollRef }) => {
   const [isShowAll, setIsShowAll] = useState(false);
   const toggleShowAll = () => {
     setIsShowAll((isShowAll) => !isShowAll);
   };
   return (
-    <section className='work-container'>
+    <section ref={scrollRef} className='work-container'>
       <div className='work-container-title'>
         <h4>Work</h4>
       </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { ListSocial } from './mockup';
 
-const Contact = () => {
+const Contact = ({ scrollRef }) => {
   return (
-    <section className='contact-container'>
+    <section ref={scrollRef} className='contact-container'>
       <div className='contact-container-title'>
         <h4>Contact</h4>
         <div className='info-contact flex-center'>
