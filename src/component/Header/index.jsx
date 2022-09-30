@@ -1,18 +1,38 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import BarIcon from '../../assets/bar.svg';
 import TimesIcon from '../../assets/mask.png';
+
 const Header = ({ scrollInWork, scrollInServices, scrollInContact }) => {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const toggleMenu = () => {
     setIsShowMenu((isShowMenu) => !isShowMenu);
   };
+  const scrollInto = (to) => {
+    switch (to) {
+      case 'work':
+        scrollInWork();
+        break;
+      case 'services':
+        scrollInServices();
+        break;
+      case 'contact':
+        scrollInContact();
+        break;
+      default:
+        break;
+    }
+    setIsShowMenu(false);
+  };
+  useEffect(() => {
+    const pathname = window.location.pathname;
+    scrollInto(pathname.replace('/', ''));
+  }, []);
   return (
     <section className='header'>
       <div className='header-top  flex-center'>
         <div className='logo'>
           <Link to={'/'}>
-            {' '}
             <h4>Logo</h4>
           </Link>
         </div>
@@ -23,7 +43,7 @@ const Header = ({ scrollInWork, scrollInServices, scrollInContact }) => {
           <Link
             to={'work'}
             onClick={() => {
-              scrollInWork();
+              scrollInto('work');
             }}
             className='flex-center'
           >
@@ -32,7 +52,7 @@ const Header = ({ scrollInWork, scrollInServices, scrollInContact }) => {
           <Link
             to={'services'}
             onClick={(e) => {
-              scrollInServices();
+              scrollInto('services');
             }}
             className='flex-center'
             href='services'
@@ -42,7 +62,7 @@ const Header = ({ scrollInWork, scrollInServices, scrollInContact }) => {
           <Link
             to={'contact'}
             onClick={() => {
-              scrollInContact();
+              scrollInto('contact');
             }}
             className='flex-center'
           >
