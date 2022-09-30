@@ -6,5 +6,6 @@ import './style/work.css';
 import './style/service.css';
 import './style/team.css';
 import './style/contact.css';
+import './style/footer.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);

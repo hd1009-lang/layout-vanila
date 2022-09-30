@@ -1,4 +1,5 @@
 import Contact from './component/Contact';
+import Footer from './component/Footer';
 import Header from './component/Header';
 import Services from './component/Service';
 import Team from './component/Team';
@@ -11,6 +12,7 @@ function App() {
       <Services />
       <Team />
       <Contact />
+      <Footer />
     </div>
   );
 }
