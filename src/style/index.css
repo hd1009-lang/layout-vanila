@@ -9,10 +9,14 @@
 html{
   color: #fff;
 }
+a{
+  text-decoration: none;
+}
 .flex-center{
   display        : flex;
   justify-content: center;
   align-items    : center;
+  flex-wrap: wrap;
 }
 
 .container{
@@ -54,7 +58,6 @@ html{
   height: 66px;
 
   color          : #fff;
-  text-decoration: none;
   text-transform: uppercase;
   font-weight    : 400;
   font-size      : 20px;

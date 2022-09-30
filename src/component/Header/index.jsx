@@ -7,8 +7,8 @@ const Header = () => {
     setIsShowMenu((isShowMenu) => !isShowMenu);
   };
   return (
-    <div className='header'>
-      <section className='header-top  flex-center'>
+    <section className='header'>
+      <div className='header-top  flex-center'>
         <div className='logo'>
           <h4>Logo</h4>
         </div>
@@ -26,15 +26,15 @@ const Header = () => {
             contact
           </a>
         </div>
-      </section>
-      <section className='header-main'>
+      </div>
+      <div className='header-main'>
         <h1>Creative Innovative Design Agency</h1>
         <span>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor
           sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
         </span>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
