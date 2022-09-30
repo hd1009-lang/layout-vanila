@@ -7,19 +7,19 @@ const Works = () => {
     setIsShowAll((isShowAll) => !isShowAll);
   };
   return (
-    <div className='work-container'>
-      <section className='work-container-title'>
+    <section className='work-container'>
+      <div className='work-container-title'>
         <h4>Work</h4>
-      </section>
-      <section className={`list-item flex-center ${isShowAll && 'show-all'}`}>
+      </div>
+      <div className={`list-item flex-center ${isShowAll && 'show-all'}`}>
         {ListWork.map((item) => {
           return <Item key={item.id} item={item} />;
         })}
-      </section>
-      <section className='box-btn flex-center'>
+      </div>
+      <div className='box-btn flex-center'>
         <button onClick={() => toggleShowAll()}>{isShowAll ? 'Hide' : 'Show All'}</button>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

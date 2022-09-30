@@ -5,5 +5,6 @@ import './style/index.css';
 import './style/work.css';
 import './style/service.css';
 import './style/team.css';
+import './style/contact.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);

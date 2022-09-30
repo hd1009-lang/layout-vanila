@@ -1,3 +1,4 @@
+import Contact from './component/Contact';
 import Header from './component/Header';
 import Services from './component/Service';
 import Team from './component/Team';
@@ -9,6 +10,7 @@ function App() {
       <Works />
       <Services />
       <Team />
+      <Contact />
     </div>
   );
 }
