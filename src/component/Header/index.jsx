@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import BarIcon from '../../assets/bar.svg';
 import TimesIcon from '../../assets/mask.png';
 const Header = ({ scrollInWork, scrollInServices, scrollInContact }) => {
@@ -10,42 +11,43 @@ const Header = ({ scrollInWork, scrollInServices, scrollInContact }) => {
     <section className='header'>
       <div className='header-top  flex-center'>
         <div className='logo'>
-          <h4>Logo</h4>
+          <Link to={'/'}>
+            {' '}
+            <h4>Logo</h4>
+          </Link>
         </div>
         <div className='icon-menu'>
           <img onClick={() => toggleMenu()} src={isShowMenu ? TimesIcon : BarIcon} alt='bar-icon' />
         </div>
         <div className={`${isShowMenu ? 'active' : ''} menu`}>
-          <a
-            onClick={(e) => {
-              e.preventDefault();
+          <Link
+            to={'work'}
+            onClick={() => {
               scrollInWork();
             }}
             className='flex-center'
-            href='work'
           >
             work
-          </a>
-          <a
+          </Link>
+          <Link
+            to={'services'}
             onClick={(e) => {
-              e.preventDefault();
               scrollInServices();
             }}
             className='flex-center'
             href='services'
           >
             services
-          </a>
-          <a
-            onClick={(e) => {
-              e.preventDefault();
+          </Link>
+          <Link
+            to={'contact'}
+            onClick={() => {
               scrollInContact();
             }}
             className='flex-center'
-            href='contact'
           >
             contact
-          </a>
+          </Link>
         </div>
       </div>
       <div className='header-main'>
