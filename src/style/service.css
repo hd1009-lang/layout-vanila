@@ -74,7 +74,7 @@
   line-height: 16px;
 
 }
-@media(min-width:1440px){
+@media(min-width:1240px){
   .services-container{
     margin-bottom: 246.78px
   }
@@ -116,7 +116,7 @@
     height: 17.89px;
   }
   .services-container .list-service .box-item-service .box-fee{
-    width : 529.69px;
+    width : 100%;
     height: 53.56px;
 
     padding-left: 43.87px;
